@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="http://127.0.0.1:9090/hospitalWeb/patient-page/style.css">
+  <title>Patient Medical Card Page</title>
+</head>
+<body>
+  <div class="header">
+    <img src="http://127.0.0.1:9090/hospitalWeb/main/img/icon-removebg-preview.png" alt="">
+    <div class="title">
+      <span class="red">H</span>ealthcare <span class="red">C</span>linic
+    </div>
+    <a href="http://127.0.0.1:9091/">Log Out</a>
+  </div>
+  <div class="main">
+    <div class="wrapper">
+      <div class="navbar">
+        <div class="photo-conteiner">
+          <img src="http://127.0.0.1:9090/hospitalWeb/patient-page/img/examination.png" alt="">
+        </div>
+        <div class="name"></div>
+        <ul>
+          <form action="/patients-main-page">
+            <li>
+                <img src="http://127.0.0.1:9090/hospitalWeb/patient-page/img/user.png" alt="">
+                  <button type="sumbit">My profile</button>
+            </li>
+            </form>
+            <form action="/patients-mydoctor-page">
+            <li>
+                <img src="http://127.0.0.1:9090/hospitalWeb/patient-page/img/stethoscope.png" alt="">
+                  <button type="sumbit">My doctor</button>
+            </li>
+            </form>
+            <form action="/patients-medcard-page">
+            <li>
+              <img src="http://127.0.0.1:9090/hospitalWeb/patient-page/img/medical-card.png" alt="">
+                  <button type="sumbit">Medical card</button>
+            </li>
+            </form>
+        </ul>
+      </div>
+      <div class="content">
+        <form action="/patients-medcard-save" method="POST">
+            <ul>
+                <li><div class="load-avatar"></div></li>
+                <li>
+                    <div class="label">Blood Group</div>
+                    <input type="text" value="{{.BloodGroup}}" name="bloodGroup">
+                    <button><img src="http://127.0.0.1:9090/hospitalWeb/patient-page/img/edit.png" alt=""></button>
+                </li>
+                <li>
+                    <div class="label">Diagnoz</div>
+                    <input type="text" value="{{.Diagnoz}}" name="diagnoz">
+                    <button><img src="http://127.0.0.1:9090/hospitalWeb/patient-page/img/edit.png" alt=""></button>
+                </li>
+                <li>
+                    <div class="label">Date of Arrival</div>
+                    <input type="text" value="{{.DateOfArrival}}" name="dateOfArrival">
+                    <button><img src="http://127.0.0.1:9090/hospitalWeb/patient-page/img/edit.png" alt=""></button>
+                </li>
+                <li>
+                    <div class="label">Date of Discharge</div>
+                    <input type="text" value="{{.DateOfDischarge}}" name="dateOfDischarge">
+                    <button><img src="http://127.0.0.1:9090/hospitalWeb/patient-page/img/edit.png" alt=""></button>
+                </li>
+            </ul>
+        </form>
+      </div>
+    </div>
+    </div>
+</body>
+</html>

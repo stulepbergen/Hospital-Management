@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="http://127.0.0.1:9090/hospitalWeb/main/main.css">
+  <title>Main Page</title>
+</head>
+<body>
+  <img class="body-img" src="http://127.0.0.1:9090/hospitalWeb/main/img/greendoctor.jpg" alt="">
+  <div class="menu">
+    <div class="icon">
+      <img src="http://127.0.0.1:9090/hospitalWeb/main/img/icon-removebg-preview.png" alt="">
+    </div>
+    <div class="bar">
+      <ul class="bar-list">
+        <li class="bar-element">Home</li>
+        <li class="bar-element">About us</li>
+        <li class="bar-element">Contacts</li>
+      </ul>
+    </div>
+  </div>
+  <div class="main">
+    <div class="title"><span class="red">H</span>ealthcare <span class="red">C</span>linic</div>
+  </div>
+  <div class="options">
+    <div class="login doctors-login">
+      <form action="/doctors-login">
+        <div class="field btn">
+          <div class="btn-layer"></div>
+          <input type="submit" value="Doctor's login">
+        </div>
+      </form>
+    </div>
+    <div class="login patients-login">
+      <form action="/patients-login">
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Patient's login">
+          </div>
+        </form>
+    </div>
+    <div class="login admins-login">
+      <form action="/admins-login">
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Admin's login">
+          </div>
+        </form>
+    </div>
+  </div>
+</body>
+</html>

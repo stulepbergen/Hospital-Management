@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="http://127.0.0.1:9090/hospitalWeb/admin-page/style.css">
+  <title>Admin Patient Page</title>
+</head>
+<body>
+  <div class="header">
+    <img src="http://127.0.0.1:9090/hospitalWeb/main/img/icon-removebg-preview.png" alt="">
+    <div class="title">
+      <span class="red">H</span>ealthcare <span class="red">C</span>linic
+    </div>
+    <a href="http://127.0.0.1:9091/">Log Out</a>
+  </div>
+  <div class="main">
+    <div class="wrapper">
+      <div class="navbar">
+        <div class="photo-conteiner">
+          <img src="http://127.0.0.1:9090/hospitalWeb/admin-page/img/hacker.png" alt="">
+        </div>
+        <div class="name"></div>
+        <ul>
+        <form action = "/admins-main-page">
+          <li>
+            <img src="http://127.0.0.1:9090/hospitalWeb/admin-page/img/user.png" alt="">
+            <button type="submit">Admin profile</button>
+          </li>
+        </form>
+        <form action = "/admins-patients-page">
+          <li>
+            <img src="http://127.0.0.1:9090/hospitalWeb/doctor-page/img/patient.png" alt="">
+            <button type="submit">Patients</button>
+          </li>
+          </form>
+          <form action = "/admins-doctors-page">
+          <li>
+            <img src="http://127.0.0.1:9090/hospitalWeb/doctor-page/img/patient.png" alt="">
+            <button type="submit">Doctors</button>
+          </li>
+          </form>
+        </ul>
+      </div>
+      <div class="content">
+      <div class="wrap">
+      <form action="/admin-delete-patient">
+      <table id="example" class="table table-striped" style="width:100px; margin: 5px auto;">
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Phone Number</th>
+              <th>Diagnoz</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{ range .Patients }}
+                <tr>
+                <td>
+                    <input type="text" value="{{.FirstName}}" name="firstName">
+                </td>
+                <td>
+                    <input type="text" value="{{.LastName}}" name="lastName">
+                </td>
+                <td>
+                    <input type="text" value="{{.PhoneNumber}}" name="phoneNumber">
+                </td>
+                <td>
+                    <input type="text" value="{{.Diagnoz}}" name="diagnoz">
+                </td>
+                <td>
+                    <button name="patientId" value="{{.Id }}">X</button>
+                </td>
+                </tr>
+            {{ end }}
+          </tbody>
+        </table>
+        </form>
+        </div>
+      </div>
+    </div>
+    </div>
+</body>
+</html>

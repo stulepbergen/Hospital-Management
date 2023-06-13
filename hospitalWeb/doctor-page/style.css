@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+
+.header{
+  padding: 5px;
+  background-color:#0a6c5f;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80px;
+  box-sizing: border-box;
+}
+
+.header img{
+  width: 50px;
+  height: 50px;
+}
+
+.header a{
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+  flex: 0 1 100px;
+  text-decoration: none;
+}
+
+.header .title{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  font-size: 20px;
+  text-shadow: black 3px 3px 0 0;
+  flex: 1 0 400px;
+}
+
+.header .title .red{
+  color: crimson;
+}
+
+.main {
+  height: auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  height: 600px;
+  margin: 10px auto;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.photo-conteiner {
+  margin: 100px auto;
+  width: 50%;
+}
+
+.photo-conteiner img{
+  width: 100px;
+  height: 100px;
+}
+.navbar {
+  background-color: #17d4be;
+  flex-basis: 300px;
+  height: auto;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.main ul {
+  list-style: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+}
+
+.main ul li {
+  height: 50px;
+  line-height: 50px;
+}
+
+.main ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.main ul li>img{
+  width: 30px;
+  height: 30px;
+  filter: invert(90%);
+}
+
+.content ul li {
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.content ul li .label {
+  flex-basis: 200px;
+}
+
+.content ul li button {
+  background: -webkit-linear-gradient(left, #0a6c5f, #17d4be);
+  border: none;
+  width: 50px;
+}
+
+.content ul li button img {
+  width: 30px;
+  height: 30px;
+  filter: invert(90%);
+}
+
+table, th, td {
+  border: 1px solid black;
+}

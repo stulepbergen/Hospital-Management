@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="http://127.0.0.1:9090/hospitalWeb/doctor-page/style.css">
+  <title>Doctor Main Page</title>
+</head>
+<body>
+  <div class="header">
+    <img src="http://127.0.0.1:9090/hospitalWeb/main/img/icon-removebg-preview.png" alt="">
+    <div class="title">
+      <span class="red">H</span>ealthcare <span class="red">C</span>linic
+    </div>
+    <a href="http://127.0.0.1:9091/">Log Out</a>
+  </div>
+  <div class="main">
+    <div class="wrapper">
+      <div class="navbar">
+        <div class="photo-conteiner">
+          <img src="http://127.0.0.1:9090/hospitalWeb/doctor-page/img/doctor.png" alt="">
+        </div>
+        <div class="name"></div>
+        <ul>
+        <form action = "/doctors-main-page">
+          <li>
+            <img src="http://127.0.0.1:9090/hospitalWeb/doctor-page/img/user.png" alt="">
+            <button type="submit">My profile</button>
+          </li>
+        </form>
+        <form action = "/doctors-patients-page">
+          <li>
+            <img src="http://127.0.0.1:9090/hospitalWeb/doctor-page/img/patient.png" alt="">
+            <button type="submit">Patients</button>
+          </li>
+          </form>
+        </ul>
+      </div>
+      <div class="content">
+        <form action="/doctors-save" method="POST">
+        <ul>
+          <li><div class="load-avatar"></div></li>
+          <li>
+            <div class="label">First Name</div>
+            <input type="text" value="{{.FirstName}}" name="firstName">
+            <button><img src="http://127.0.0.1:9090/hospitalWeb/doctor-page/img/edit.png" alt=""></button>
+          </li>
+          <li>
+            <div class="label">Last Name</div>
+            <input type="text" value="{{.LastName}}" name="lastName">
+            <button><img src="http://127.0.0.1:9090/hospitalWeb/doctor-page/img/edit.png" alt=""></button>
+          </li>
+          <li>
+            <div class="label">Birth Date</div>
+            <input type="text" value="{{.DateBirth}}" name="dateBirth">
+            <button><img src="http://127.0.0.1:9090/hospitalWeb/doctor-page/img/edit.png" alt=""></button>
+          </li>
+          <li>
+            <div class="label">Phone Number</div>
+            <input type="text" value="{{.PhoneNumber}}" name="phoneNumber">
+            <button><img src="http://127.0.0.1:9090/hospitalWeb/doctor-page/img/edit.png" alt=""></button>
+          </li>
+          <li>
+            <div class="label">Address</div>
+            <input type="text" value="{{.Address}}" name="address">
+            <button><img src="http://127.0.0.1:9090/hospitalWeb/doctor-page/img/edit.png" alt=""></button>
+          </li>
+          <li>
+            <div class="label">Position</div>
+            <input type="text" value="{{.Position}}" name="position">
+            <button><img src="http://127.0.0.1:9090/hospitalWeb/doctor-page/img/edit.png" alt=""></button>
+          </li>
+        </ul>
+        </form>
+      </div>
+    </div>
+    </div>
+</body>
+</html>
